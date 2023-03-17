@@ -6,10 +6,9 @@ import "./App.css";
 const App = () => {
   const [values, setValues] = useState({
     userName: "",
-    tel: "",
+    phonenum: "",
     date: "",
     email: "",
-    confirmEmail: "",
   });
 
   const inputs = [
@@ -70,7 +69,8 @@ const App = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  console.log(values);
+
+  const onClick = () => console.log(values);
 
   return (
     <div className="app">
@@ -84,7 +84,7 @@ const App = () => {
             onChange={onChange}
           />
         ))}
-        <button>Submit</button>
+        <button onClick={onClick}>Submit</button>
       </form>
     </div>
   );
