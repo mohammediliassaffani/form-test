@@ -1,0 +1,14 @@
+input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.formInput {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-size: 14px;
+  color: rgb(14, 13, 13);
+}
