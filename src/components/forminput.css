@@ -12,3 +12,16 @@ label {
   font-size: 14px;
   color: rgb(14, 13, 13);
 }
+span {
+  font-size: 11px;
+  padding: 3px;
+  color: red;
+  display: none;
+}
+input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ span {
+  display: block;
+}

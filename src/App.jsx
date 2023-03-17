@@ -18,14 +18,21 @@ const App = () => {
       name: "userName",
       type: "text",
       palaceholder: "User name",
+      errorMessage:
+        "Username should be 4-10 characters and no special characters ",
       label: "user name",
+      pattern: "^[A-Za-z0-9]{4,10}$",
+      required: true,
     },
     {
       id: 2,
       name: "phonenum",
-      type: "number",
+      type: "tel",
       palaceholder: "Phone Num",
+      errorMessage: "phone number invalide",
       label: "Phone Num",
+      pattern: "^[0-9]{8,10}$",
+      required: true,
     },
     {
       id: 3,
@@ -33,20 +40,26 @@ const App = () => {
       type: "datetime-local",
       palaceholder: "Date",
       label: "Date",
+      required: true,
     },
     {
       id: 4,
       name: "email",
       type: "email",
       palaceholder: "Email",
-      label: "Email",
+      errorMessage: "eamail invalide",
+      label: "Email ",
+      required: true,
     },
     {
       id: 5,
       name: "confirmemail",
       type: "email",
       palaceholder: "Confirm Email",
+      errorMessage: "email not match",
       label: "confirm email",
+      pattern: values.email,
+      required: true,
     },
   ];
   const handleSubmit = (e) => {
@@ -57,7 +70,6 @@ const App = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-
   console.log(values);
 
   return (
